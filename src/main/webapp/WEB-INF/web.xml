@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <display-name>FoodApp</display-name>
+  <welcome-file-list>
+    <welcome-file>first</welcome-file>
+    
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  
+
+  
+  <servlet>
+  	<servlet-class>com.project.RegisterRestaurantServlet</servlet-class>
+  	<servlet-name>callingRestaurantServlet</servlet-name>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>callingRestaurantServlet</servlet-name>
+  	<url-pattern>/AddRestaurantServlet</url-pattern>
+  </servlet-mapping>
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>

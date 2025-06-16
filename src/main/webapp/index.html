@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Adding user Details</title>
+</head>
+<style>
+	/* Reset some default styling */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fff8f0; /* warm food-friendly background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+form {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+  padding: 30px 40px;
+  max-width: 420px;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px; /* vertical spacing */
+}
+
+td {
+  vertical-align: middle;
+}
+
+label {
+  font-weight: 600;
+  color: #ff6f3c; /* warm orange accent */
+  padding-right: 15px;
+  min-width: 100px;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 2px solid #ff6f3c;
+  border-radius: 6px;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #ff3a00;
+  outline: none;
+  box-shadow: 0 0 8px #ff6f3c66;
+}
+
+textarea {
+  min-height: 60px;
+}
+
+button {
+  background: #ff6f3c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e65c29;
+}
+
+a {
+  display: block;
+  margin-top: 25px;
+  text-align: center;
+  color: #ff6f3c;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e65c29;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+  }
+
+  label {
+    min-width: 90px;
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+}
+	
+</style>
+<body>
+	<form action="callinguser" method = "Post">
+    <table>
+        <tr>
+            <td><label>Name: </label></td>
+            <td><input type="text" name="name" required></td>
+        </tr>
+        <tr>
+            <td><label>UserName: </label></td>
+            <td><input type="text" name="username" required></td>
+        </tr>
+        <tr>
+            <td><label>Password: </label></td>
+            <td><input type="password" name="password" required></td>
+        </tr>
+        <tr>
+            <td><label>Email: </label></td>
+            <td><input type="email" name="email" required></td>
+        </tr>
+        <tr>
+            <td><label>Phone Number: </label></td>
+            <td><input type="text" name="phonenumber" required></td>
+        </tr>
+        <tr>
+            <td><label>Address: </label></td>
+            <td><textarea name="address"></textarea></td>
+        </tr>
+        <tr>
+            <td><label>Role: </label></td>
+            <td>
+                <select name="role" required>
+                    <option value="Customer">Customer</option>
+                    <option value="RestaurantOwner">Restaurant Owner</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Register</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+<a href = "Addrestaurant.html">Add Restuarants</a>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurant Registration</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .form-container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
+      width: 100%;
+      max-width: 480px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 15px;
+      transition: border 0.2s ease;
+    }
+
+    input:focus {
+      border-color: #fc8019;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #fc8019;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e06b00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Register Your Restaurant</h2>
+    <form action="AddRestaurantServlet">
+      <label for="name">Restaurant Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="address">Address</label>
+      <input type="text" id="address" name="address" required />
+
+      <label for="phonenumber">Phone Number</label>
+      <input type="text" id="phonenumber" name="phonenumber" required />
+
+      <label for="cuisinetype">Cuisine Type</label>
+      <input type="text" id="cuisinetype" name="cuisinetype" required />
+
+      <label for="deliverytime">Delivery Time (in minutes)</label>
+      <input type="number" id="deliverytime" name="deliverytime" min="10" required />
+      
+      <label>Rating</label>
+      <input type="number" step="0.1" name="rating" placeholder="Enter Rating (e.g., 4.5)" required>
+      
+
+      <label for="imagepath">Image Path</label>
+      <input type="text" id="imagepath" name="imagepath" required />
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+</body>
+</html>
